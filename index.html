@@ -357,7 +357,7 @@ mb.onclick=()=>{if(bgm.paused){wantMusic=true;bgm.play().then(upM).catch(upM)}el
 document.addEventListener("visibilitychange",()=>{if(document.hidden)bgm.pause();else playM()});
 
 /* ===== Auto scroll ===== */
-const SPEED=60; // pixels per second — lower = slower
+const SPEED=80; // pixels per second — lower = slower
 let auto=false,pos=0,last=0;
 function step(t){if(!auto)return;const dt=Math.min((t-last)/1000,.1);last=t;pos+=SPEED*dt;
  scrollTo({top:pos,behavior:"instant"});
